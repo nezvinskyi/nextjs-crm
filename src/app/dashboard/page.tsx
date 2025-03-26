@@ -1,8 +1,4 @@
-export interface PageProps {
-  children?: React.ReactNode
-}
-
-export default function Page({}: PageProps) {
+export default function Page() {
   return (
     <main>
       <h1 className="text-xl">Dashboard</h1>
