@@ -1,9 +1,9 @@
-import styles from './active-label.module.css'
+import styles from './not-active-label.module.css'
 
-export interface ActiveLabelProps {
+export interface NotActiveLabelProps {
   children: React.ReactNode
 }
 
-export default function ActiveLabel({ children }: ActiveLabelProps) {
+export default function NotActiveLabel({ children }: NotActiveLabelProps) {
   return <span className={styles.label}>{children}</span>
 }
