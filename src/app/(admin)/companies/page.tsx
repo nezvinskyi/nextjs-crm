@@ -1,3 +1,4 @@
+import MagicButton from '@/app/components/magic-button'
 import AddCompanyButton from '../../components/add-company-button'
 import CompanyRow from '../../components/company-row'
 import CompanyTable from '../../components/company-table'
@@ -37,6 +38,7 @@ export default function Page() {
           joinedDate="02.18.2024"
         />
       </CompanyTable>
+      <MagicButton />
     </>
   )
 }
