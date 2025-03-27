@@ -27,6 +27,15 @@ export default function Page() {
           country={'USA'}
           joinedDate="02.18.2021"
         />
+        <CompanyRow
+          id={2}
+          category={'Real Estate'}
+          company={'DAAHFLX'}
+          status={Status.Active}
+          promotion={true}
+          country={'Austria'}
+          joinedDate="02.18.2024"
+        />
       </CompanyTable>
     </>
   )
