@@ -3,16 +3,33 @@ import SummaryTable from '@/app/components/summary-table'
 import SummaryTableHeader from '@/app/components/summary-table-header'
 import SummaryTableCell from '@/app/components/summary-table-cell'
 import DashboardCard from '@/app/components/dashboard-card'
+import MagicButton from '@/app/components/magic-button'
 
 export interface PageProps {
   children?: React.ReactNode
 }
 
 export default async function Page({}: PageProps) {
-  const data = await getSummarySales()
+  const data: {
+    companyId: number
+    companyTitle: string
+    sold: number
+    income: number
+  }[] = await new Promise((resolve) => {
+    setTimeout(async () => {
+      resolve(await getSummarySales())
+    }, 1000)
+  })
 
   return (
-    <DashboardCard label="Sales details">
+    <DashboardCard
+      label={
+        <>
+          Sales details
+          <MagicButton />
+        </>
+      }
+    >
       <SummaryTable
         headers={
           <>

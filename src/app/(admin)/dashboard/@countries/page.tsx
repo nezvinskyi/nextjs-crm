@@ -3,7 +3,9 @@ import clsx from 'clsx'
 import { getSummaryCountries } from '@/lib/api'
 import DashboardCard from '@/app/components/dashboard-card'
 
-export interface PageProps {}
+export interface PageProps {
+  children?: React.ReactNode
+}
 
 export default async function Page({}: PageProps) {
   const data = await getSummaryCountries()

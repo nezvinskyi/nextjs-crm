@@ -3,7 +3,9 @@ import { getSummaryCategories } from '@/lib/api'
 import StatCard, { StatCardType } from '@/app/components/stat-card'
 import DashboardCard from '@/app/components/dashboard-card'
 
-export interface PageProps {}
+export interface PageProps {
+  children?: React.ReactNode
+}
 
 export default async function Page({}: PageProps) {
   const data = await getSummaryCategories()
