@@ -10,15 +10,10 @@ export interface PageProps {
 }
 
 export default async function Page({}: PageProps) {
-  const data: {
-    companyId: number
-    companyTitle: string
-    sold: number
-    income: number
-  }[] = await new Promise((resolve) => {
-    setTimeout(async () => {
-      resolve(await getSummarySales())
-    }, 1000)
+  const data = await getSummarySales({
+    next: {
+      revalidate: 5,
+    },
   })
 
   return (
